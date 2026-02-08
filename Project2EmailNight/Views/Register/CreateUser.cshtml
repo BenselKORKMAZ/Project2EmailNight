@@ -1,26 +1,31 @@
-﻿
+﻿@model Project2EmailNight.Dtos.UserRegisterDto
+
 @{
     Layout = null;
 }
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
 <div class="container">
     <form method="post">
         <br /> <br />
         <label>Name</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" asp-for="Name">
         <br />
         <label>Surname</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" asp-for="Surname">
         <br />
         <label>Username</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" asp-for="UserName">
         <br />
         <label>Email</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" asp-for="Email">
         <br />
         <label>Password</label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" asp-for="Password">
         <br />
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div> 
+        <button class="btn btn-primary">Register</button>
     </form>
 </div>
    

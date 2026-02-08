@@ -11,5 +11,7 @@ namespace Project2EmailNight.Context
             optionsBuilder.UseSqlServer("Server=BESO;initial catalog=Project2EmailNightDb;integrated security=true");
         }
 
+        public DbSet<Message> Messages { get; set; }
+
     }
 }
